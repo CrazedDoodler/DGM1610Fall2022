@@ -1,4 +1,4 @@
-using System
+using System;
 
 public class Program
 {
@@ -21,9 +21,9 @@ public class Program
     public void Compare (int value, int value2)
     {
         if(value > value2) {
-            Console.WriteLine("Correct, " + value + " is greater")
+            Console.WriteLine("Correct, " + value + " is greater");
         } else {
-            Console.WriteLine("Sorry, " + value2 + "is greater")
+            Console.WriteLine("Sorry, " + value2 + "is greater");
         }
     }
 
