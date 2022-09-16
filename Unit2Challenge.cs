@@ -6,18 +6,36 @@ public class Program
     {
 		int x = 20;
         int y = 10;
-		int score = 3000;
-        Console.WriteLine("Score: " + score);
-		ammoCount (0, x, y, score);
+        Score ();
+		Ammo (0, x, y);
     }
-
-    public void ammoCount(int value, int x, int y, int score)
+	
+	public void Score()
+	{
+		int points = 3;
+		switch (points)
+		{
+			case 1:
+				Console.WriteLine("Score: 1000");
+				break;
+			case 2:
+				Console.WriteLine("Score: 2000");
+				break;
+			case 3:
+				Console.WriteLine("Score: 3000");
+				break;
+	    }
+    }
+	
+    public void Ammo(int value, int x, int y)
     {
-        if (value < 0)
+        if (value == 0)
         {
             var number = value + x;
             Console.WriteLine("Ammo: " + number);
-        } else if (score >= 3000) {
+        }
+		else if (value >= 10)
+		{
             var number = value + x + y;
             Console.WriteLine("Ammo: " + number);
         }
