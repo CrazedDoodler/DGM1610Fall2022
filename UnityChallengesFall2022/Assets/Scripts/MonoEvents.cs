@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MonoEventBehavior : MonoBehaviour
+public class MonoEvents : MonoBehaviour
 {
-    public UnityEvent updateEvent, collisionEvent, resetEvent;
+    public UnityEvent updateEvent, collisionEvent, triggerEvent;
 
     private void Update()
     {
@@ -15,8 +15,8 @@ public class MonoEventBehavior : MonoBehaviour
         collisionEvent.Invoke();
     }
 
-    private void Reset()
+    private void OnTriggerEnter()
     {
-        resetEvent.Invoke();
+        triggerEvent.Invoke();
     }
 }
