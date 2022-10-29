@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float xRange;
     public Transform blaster;
     public GameObject projectile;
+    public Transform itemDrop;
+    public GameObject item;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +33,11 @@ public class PlayerController : MonoBehaviour
         {
             //creates projectile for blaster
             Instantiate(projectile, blaster.transform.position, projectile.transform.rotation);
+        }
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            //creates item for item drop
+            Instantiate(item, itemDrop.transform.position, item.transform.rotation);
         }
 
     }

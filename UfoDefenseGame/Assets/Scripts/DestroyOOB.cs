@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DestroyOOB : MonoBehaviour
 {
-    public float topBounds = 60.0f;
-    public float lowerBounds = -10.0f;
+    public float topBounds = 90.0f;
+    public float lowerBounds = -50.0f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,7 +21,7 @@ public class DestroyOOB : MonoBehaviour
         }
         else if(transform.position.z < lowerBounds)
         {
-            Debug.Log("Game Over...");
+            //Debug.Log("Game Over...");
             Destroy(gameObject);
             //Time.timeScale = 0;
         }
