@@ -6,7 +6,7 @@ public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs; // Array to store Enemy Ships
     private float spawnRangeX = 60f;
-    private float spawnPosZ = 20f;
+    private float spawnPosZ = 35f;
     private float startDelay = 4f;
     private float spawnInterval = 2.5f;
     void Start()
