@@ -6,10 +6,12 @@ public class DestroyOOB : MonoBehaviour
 {
     public float topBounds = 90.0f;
     public float lowerBounds = -50.0f;
+    public GameManager gameManager;
+
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        Time.timeScale = 1;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class DestroyOOB : MonoBehaviour
         {
             Debug.Log("Game Over...");
             Destroy(gameObject);
-            Time.timeScale = 0;
+            gameManager.isGameOver = true;
         }
     }
 }

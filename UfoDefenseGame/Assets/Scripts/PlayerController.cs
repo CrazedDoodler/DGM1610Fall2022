@@ -11,6 +11,12 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
     public Transform itemDrop;
     public GameObject item;
+    public GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,7 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             //creates projectile for blaster
             Instantiate(projectile, blaster.transform.position, projectile.transform.rotation);
