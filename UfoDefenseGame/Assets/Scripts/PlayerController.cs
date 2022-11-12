@@ -12,10 +12,14 @@ public class PlayerController : MonoBehaviour
     public Transform itemDrop;
     public GameObject item;
     public GameManager gameManager;
+    public AudioClip deathSounds;
+    public AudioClip shootSounds;
+    private AudioSource playerAudio;
 
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,8 @@ public class PlayerController : MonoBehaviour
         {
             //creates projectile for blaster
             Instantiate(projectile, blaster.transform.position, projectile.transform.rotation);
+            //plays shoot sound
+            playerAudio.PlayOneShot(shootSounds, 1.0f);
         }
         if(Input.GetKeyDown(KeyCode.Z))
         {
@@ -51,5 +57,6 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        playerAudio.PlayOneShot(deathSounds, 1.0f);
     }
 }
