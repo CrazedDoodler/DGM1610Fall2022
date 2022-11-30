@@ -8,7 +8,7 @@ public class SpriteBehavior : MonoBehaviour
 {
     private SpriteRenderer renderObj;
 
-    private void Start()
+    private void Awake()
     {
         renderObj = GetComponent<SpriteRenderer>();
     }
