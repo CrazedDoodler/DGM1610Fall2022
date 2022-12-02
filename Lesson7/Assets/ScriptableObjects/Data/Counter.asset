@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf6eba2e1696ece479862365f38cbb30, type: 3}
-  m_Name: Blue
+  m_Script: {fileID: 11500000, guid: d8a7d6135f21cd04ab0416b50cc414ed, type: 3}
+  m_Name: Counter
   m_EditorClassIdentifier: 
-  value: {r: 0, g: 0.21920633, b: 1, a: 1}
+  value: 0
